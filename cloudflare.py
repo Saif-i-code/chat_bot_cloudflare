@@ -3,7 +3,7 @@ import requests
 import json
 import os 
 from dotenv import load_dotenv
-load_dotenv("chat_cloudflare.env")
+load_dotenv(os.path.join(os.path.dirname(__file__), "chat_cloudflare.env"))
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CLOUDFLARE_ACCOUNT_ID = os.getenv('CLOUDFLARE_ACCOUNT_ID')
